@@ -1,0 +1,145 @@
+@import "variables";
+@import "mixins";
+
+body {
+  position: relative;
+	padding-top: 55px;
+}
+
+h1, h2, h3, h4, h5 {
+  border-bottom: 1px solid @lighterGray;
+}
+
+small { color: @lightGray; }
+
+.accordion-inner .row-fluid {
+  margin-left: 0;
+  
+  &.skills li:nth-child(3n+1) {
+    clear: both;
+    margin-left: 0;
+  }
+  
+  &.items > li:nth-child(4n+1) {
+    clear: both;
+    margin-left: 0;
+  }
+  
+  .blue h4 {
+    color: @blue;
+  }
+  
+  .yellow h4 {
+    color: @yellow;
+  }
+
+  .green h4 {
+    color: @green;
+  }
+
+  .orange h4 {
+    color: @orange;
+  }
+}
+
+.wizard .wizard, .wizard h1 { color: @wizard; }
+.barbarian .barbarian, .barbarian h1 { color: @barbarian; }
+.demon-hunter .demon-hunter, .demon-hunter h1 { color: @demon-hunter; }
+.monk .monk, .monk h1 { color: @monk; }
+.witch-doctor .witch-doctor, .witch-doctor h1 { color: @witch-doctor; }
+
+//
+// Login
+// --------------------------------
+#login-row {
+  form {
+    border: 1px solid @lighterGray;
+    padding: 14px 19px;
+    .border-radius(4px);
+  }
+}
+
+//
+// Hero overview
+// ---------------------------------
+.hero {
+  margin-bottom: 15px;
+  
+  h4 { 
+    border-bottom: 0;
+    margin: 0; 
+  }
+  span { 
+    position: absolute;
+    font-size: 100px;
+    background: transparent;
+    opacity: .2;
+    top: 15px;
+    right: -10px;
+    font-weight: 600;
+    z-index: 0;
+  }
+  
+  a {
+    border: 1px solid @lighterGray;
+    padding: 7px 19px;
+    .border-radius(4px);
+    display: block; 
+    position: relative;
+    overflow: hidden;
+    
+    &:hover {
+      border: 1px solid @lightGray;
+      background: @lighterGray;
+      text-decoration: none;
+      
+    }
+  }
+  
+  p {
+    font-size: 12px;
+    color: @lightGray;
+    margin: 0;
+  }
+  
+  .wizard { color: @wizard; }
+  .barbarian { color: @barbarian; }
+  .demon-hunter { color: @demon-hunter; }
+  .monk { color: @monk; }
+  .witch-doctor { color: @witch-doctor; }  
+}
+
+#stats {
+  margin-bottom: 20px;
+  
+  > div { 
+    overflow: hidden; 
+
+    dt {
+      float: left;
+      clear: both;
+    }
+
+    dd {
+      float: right;
+    }
+  }
+}
+
+//
+// Media queries
+// ---------------------------------
+@media (max-width: 480px) {
+}
+
+@media (max-width: 980px) and (min-width: 480px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}*/

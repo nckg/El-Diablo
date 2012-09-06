@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Diablo 3 Profile</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+	<body id="index">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="/">Diablo 3 - Armory</a>
+			</div>
+		  </div>
+		</div>
+		<div class="container-fluid">
+			<div class="row-fluid" id="login-row">
+				<div class="span12">
+					<form id="searchform" class="form-horizontal">
+				  		<legend>Find your heroes with your Battle.net ID</legend>
+						<div class="control-group">
+							<label class="control-label" for="battlenetid">Battle.net ID</label>
+							<div class="controls">
+								<input type="text" placeholder="YourId#1234" value="" name="battlenetid" id="battlenetid" />
+							</div>
+						</div>
+					
+						<div class="control-group">
+							<label class="control-label" for="battlenetid">Region</label>
+							<div class="controls">
+								<select name="region" id="region">
+							    	<option value="eu">Europe</option>
+							    	<option value="us">US</option>
+							    	<option value="kr">Korea</option>
+							    	<option value="tw">Taiwan</option>
+							    </select>
+							</div>
+						</div>
+					
+						<div class="control-group">
+							<div class="controls">
+								<button type="submit" class="btn btn-primary">Find your heroes</button>
+							</div>
+						</div>
+					
+					</form>
+				</div>
+			</div><!-- /#login -->
+			<div id="heroes"></div><!-- /#heroes -->
+			<div id="hero"></div><!-- /#hero -->
+		</div>
+		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/mustache.js"></script>
+		<script src="js/libs/bootstrap.min.js"></script>
+		<script src="js/templates.js"></script>
+		<script src="js/views.js"></script>
+		<script src="js/diablo.js"></script>
+	</body>
+</html>
