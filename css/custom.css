@@ -133,6 +133,9 @@ small {
 #stats > div dd {
   float: right;
 }
+.footer p {
+  text-align: center;
+}
 @media (max-width: 480px) {
   
 }
