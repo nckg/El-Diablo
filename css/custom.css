@@ -82,6 +82,9 @@ small {
   font-weight: 600;
   z-index: 0;
 }
+.hero .paragon-level {
+  float: right;
+}
 .hero a {
   border: 1px solid #dddddd;
   padding: 7px 19px;

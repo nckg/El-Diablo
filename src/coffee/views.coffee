@@ -97,6 +97,9 @@ class window.Hero
   paragonBadge: () ->
    "<span class=\"badge badge-info paragon-level\">#{@paragonLevel}</span>" if @paragonLevel > 0
   
+  getParagonLevel: () ->
+    " - paragon: #{@paragonLevel}" if @paragonLevel > 0
+    
 class window.Item
   constructor: ( @identifier, data ) ->
     @displayColor   = data.displayColor
