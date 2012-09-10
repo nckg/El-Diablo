@@ -61,17 +61,24 @@
   window.Overview = (function() {
 
     function Overview(data) {
+      var hero, _i, _len, _ref;
       this.artisans = data.artisans;
       this.battleTag = data.battleTag;
       this.fallenHeroes = data.fallenHeroes;
       this.hardcoreArtisans = data.hardcoreArtisans;
       this.hardcoreProgression = data.hardcoreProgression;
-      this.heroes = data.heroes;
+      this.heroes = [];
       this.kills = data.kills;
       this.lastHeroPlayed = data.lastHeroPlayed;
       this.lastUpdated = data.lastUpdated;
       this.progression = data.progression;
       this.timePlayed = data.timePlayed;
+      _ref = data.heroes;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        hero = _ref[_i];
+        this.heroes.push(new Hero(hero));
+      }
+      console.log(this.heroes);
     }
 
     return Overview;
@@ -99,20 +106,23 @@
       this.items = [];
       this.activeSkills = [];
       this.passiveSkills = [];
+      console.log(data);
       _ref = data.items;
       for (key in _ref) {
         item = _ref[key];
         this.items.push(new Item(key, item));
       }
-      _ref2 = data.skills.active;
-      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
-        skill = _ref2[_i];
-        if (skill.skill !== void 0) this.activeSkills.push(new Skill(skill));
-      }
-      _ref3 = data.skills.passive;
-      for (_j = 0, _len2 = _ref3.length; _j < _len2; _j++) {
-        skill = _ref3[_j];
-        if (skill.skill !== void 0) this.passiveSkills.push(new Skill(skill));
+      if (data.skills !== void 0) {
+        _ref2 = data.skills.active;
+        for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+          skill = _ref2[_i];
+          if (skill.skill !== void 0) this.activeSkills.push(new Skill(skill));
+        }
+        _ref3 = data.skills.passive;
+        for (_j = 0, _len2 = _ref3.length; _j < _len2; _j++) {
+          skill = _ref3[_j];
+          if (skill.skill !== void 0) this.passiveSkills.push(new Skill(skill));
+        }
       }
     }
 
@@ -120,6 +130,12 @@
       return function(value, render) {
         return "" + (parseInt(value * 100)) + "%";
       };
+    };
+
+    Hero.prototype.paragonBadge = function() {
+      if (this.paragonLevel > 0) {
+        return "<span class=\"badge badge-info paragon-level\">" + this.paragonLevel + "</span>";
+      }
     };
 
     return Hero;

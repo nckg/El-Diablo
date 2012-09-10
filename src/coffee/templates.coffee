@@ -9,8 +9,8 @@ templates.hero_overview = '''
     {{#heroes}}
     <div class="span2 hero">
       <a href="#{{id}}" data-id="{{id}}">
-        <h4>{{name}}</h4>
-          <span class="{{class}}">{{level}}</span>
+        <h4>{{name}}{{{paragonBadge}}}</h4>
+          <span class="{{class}} level">{{level}}</span>
           <p class="classname">{{class}}</p>
       </a>
     </div>

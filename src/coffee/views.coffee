@@ -47,12 +47,17 @@ class window.Overview
     @fallenHeroes         = data.fallenHeroes
     @hardcoreArtisans     = data.hardcoreArtisans
     @hardcoreProgression  = data.hardcoreProgression
-    @heroes               = data.heroes
+    @heroes               = []
     @kills                = data.kills
     @lastHeroPlayed       = data.lastHeroPlayed
     @lastUpdated          = data.lastUpdated
     @progression          = data.progression
     @timePlayed           = data.timePlayed
+    
+    for hero in data.heroes
+      @heroes.push new Hero( hero )
+      
+    console.log(@heroes)
     
 class window.Hero
   constructor:  ( data, @callback=null ) ->
@@ -73,18 +78,24 @@ class window.Hero
     @activeSkills = []
     @passiveSkills = []
     
+    console.log data
+    
     for key, item of data.items
       @items.push new Item( key, item )
-      
-    for skill in data.skills.active
-      @activeSkills.push new Skill( skill ) if skill.skill isnt undefined
+    
+    if data.skills isnt undefined
+      for skill in data.skills.active
+        @activeSkills.push new Skill( skill ) if skill.skill isnt undefined
   
-    for skill in data.skills.passive
-      @passiveSkills.push new Skill( skill ) if skill.skill isnt undefined
+      for skill in data.skills.passive
+        @passiveSkills.push new Skill( skill ) if skill.skill isnt undefined
   
   toPercent: () ->
     ( value, render ) ->
-      "#{parseInt( value * 100 )}%" 
+      "#{parseInt( value * 100 )}%"
+  
+  paragonBadge: () ->
+   "<span class=\"badge badge-info paragon-level\">#{@paragonLevel}</span>" if @paragonLevel > 0
   
 class window.Item
   constructor: ( @identifier, data ) ->
