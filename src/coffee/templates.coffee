@@ -21,7 +21,7 @@ templates.hero_overview = '''
 templates.hero_detail = '''
   <div id="hero-detail" class="{{class}}">
     <div class="row-fluid" id="name">
-      <h1>{{name}} <small>level <strong>{{level}}</strong> {{class}}{{getParagonLevel}}</small></h1>
+      <h1>{{name}} <small>level <strong>{{level}}</strong> {{class}}{{{getParagonLevel}}}</small></h1>
     </div>
     {{#stats}}
     <div class="row-fluid" id="stats">
