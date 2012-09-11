@@ -72,7 +72,7 @@ small {
   border-bottom: 0;
   margin: 0;
 }
-.hero span {
+.hero .level {
   position: absolute;
   font-size: 100px;
   background: transparent;
@@ -81,6 +81,9 @@ small {
   right: -10px;
   font-weight: 600;
   z-index: 0;
+}
+.hero .paragon-level {
+  float: right;
 }
 .hero a {
   border: 1px solid #dddddd;
