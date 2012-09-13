@@ -4,6 +4,7 @@ body {
   padding-top: 55px;
   color: #fff;
   font-size: 12px;
+  text-shadow: 0 1px 0 #000;
 }
 .navbar-inverse .navbar-inner {
   background: #dfdfdf;
@@ -66,6 +67,16 @@ body {
 }
 #hero-overview .witch-doctor {
   background-position: right -326px;
+}
+#hero-detail #name {
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #424141;
+  border-bottom: 1px solid #424141;
+  height: 68px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 }
 /*
 h1, h2, h3, h4, h5 {

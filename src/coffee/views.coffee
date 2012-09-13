@@ -98,7 +98,7 @@ class window.Hero
    "<span class=\"badge badge-info paragon-level\">#{@paragonLevel}</span>" if @paragonLevel > 0
   
   getParagonLevel: () ->
-    " (#{@paragonLevel})" if @paragonLevel > 0        
+    " <span class=\"paragon\">(#{@paragonLevel})</span>" if @paragonLevel > 0        
     
 class window.Item
   constructor: ( @identifier, data ) ->
