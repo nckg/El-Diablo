@@ -7,11 +7,11 @@ window.templates = []
 templates.hero_overview = '''
   <div class="row-fluid" id="hero-overview">
     {{#heroes}}
-    <div class="span2 hero">
+    <div class="span3 hero {{class}}">
       <a href="#{{id}}" data-id="{{id}}">
-        <h4>{{name}}{{{paragonBadge}}}</h4>
-          <span class="{{class}} level">{{level}}</span>
-          <p class="classname">{{class}}</p>
+        <h4>{{name}}</h4>
+        <span class="{{class}} level">{{level}}</span>
+        <p class="classname">{{class}}{{{getParagonLevel}}}</p>
       </a>
     </div>
 		{{/heroes}}

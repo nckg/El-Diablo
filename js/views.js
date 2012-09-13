@@ -139,9 +139,7 @@
     };
 
     Hero.prototype.getParagonLevel = function() {
-      if (this.paragonLevel > 0) {
-        return " - paragon: <strong>" + this.paragonLevel + "</strong>";
-      }
+      if (this.paragonLevel > 0) return " (" + this.paragonLevel + ")";
     };
 
     return Hero;

@@ -1,141 +1,144 @@
 body {
+  background: #333333 url(../img/bg.jpg) 0 0 repeat;
   position: relative;
   padding-top: 55px;
+  color: #fff;
+  font-size: 12px;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  border-bottom: 1px solid #dddddd;
+.navbar-inverse .navbar-inner {
+  background: #dfdfdf;
 }
-small {
-  color: #999999;
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a,
+.navbar-inverse .brand:hover,
+.navbar-inverse .nav > li > a:hover {
+  color: #333333;
+  text-shadow: 0 1px 0 #fff;
 }
+#hero-overview .hero {
+  background: rgba(0, 0, 0, 0.2) url(../img/bg-overview.png) right -6px no-repeat;
+  border: 1px solid #424141;
+  height: 68px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+#hero-overview .hero a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+  height: 46px;
+  overflow: hidden;
+  position: relative;
+}
+#hero-overview .hero a .level {
+  color: #000;
+  position: absolute;
+  font-size: 120px;
+  background: transparent;
+  opacity: .4;
+  top: -25px;
+  right: -20px;
+  font-weight: 600;
+  z-index: 1;
+  height: 120px;
+  line-height: 120px;
+}
+#hero-overview .hero a h4 {
+  margin: 0;
+}
+#hero-overview > div:nth-child(4n+1) {
+  clear: both;
+  margin-left: 0;
+}
+#hero-overview .wizard {
+  background-position: right -6px;
+}
+#hero-overview .barbarian {
+  background-position: right -86px;
+}
+#hero-overview .demon-hunter {
+  background-position: right -166px;
+}
+#hero-overview .monk {
+  background-position: right -246px;
+}
+#hero-overview .witch-doctor {
+  background-position: right -326px;
+}
+/*
+h1, h2, h3, h4, h5 {
+  border-bottom: 1px solid @lighterGray;
+}
+
+small { color: @lightGray; }
+
 .accordion-inner .row-fluid {
   margin-left: 0;
-}
-.accordion-inner .row-fluid.skills li:nth-child(3n+1) {
-  clear: both;
-  margin-left: 0;
-}
-.accordion-inner .row-fluid.items > li:nth-child(4n+1) {
-  clear: both;
-  margin-left: 0;
-}
-.accordion-inner .row-fluid .blue h4 {
-  color: #049cdb;
-}
-.accordion-inner .row-fluid .yellow h4 {
-  color: #ffc40d;
-}
-.accordion-inner .row-fluid .green h4 {
-  color: #46a546;
-}
-.accordion-inner .row-fluid .orange h4 {
-  color: #f89406;
-}
-.wizard .wizard,
-.wizard h1 {
-  color: #3b5578;
-}
-.barbarian .barbarian,
-.barbarian h1 {
-  color: #aa563d;
-}
-.demon-hunter .demon-hunter,
-.demon-hunter h1 {
-  color: #905966;
-}
-.monk .monk,
-.monk h1 {
-  color: #b16b36;
-}
-.witch-doctor .witch-doctor,
-.witch-doctor h1 {
-  color: #5e6253;
-}
-#login-row form {
-  border: 1px solid #dddddd;
-  padding: 14px 19px;
-  -webkit-background-clip: padding-box;
-  /* fix WebKit background bleed on border-radius */
+  
+  &.skills li:nth-child(3n+1) {
+    clear: both;
+    margin-left: 0;
+  }
+  
+  &.items > li:nth-child(4n+1) {
+    clear: both;
+    margin-left: 0;
+  }
+  
+  .blue h4 {
+    color: @blue;
+  }
+  
+  .yellow h4 {
+    color: @yellow;
+  }
 
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-.hero {
-  margin-bottom: 15px;
-}
-.hero h4 {
-  border-bottom: 0;
-  margin: 0;
-}
-.hero .level {
-  position: absolute;
-  font-size: 100px;
-  background: transparent;
-  opacity: .2;
-  top: 15px;
-  right: -10px;
-  font-weight: 600;
-  z-index: 0;
-}
-.hero .paragon-level {
-  float: right;
-}
-.hero a {
-  border: 1px solid #dddddd;
-  padding: 7px 19px;
-  -webkit-background-clip: padding-box;
-  /* fix WebKit background bleed on border-radius */
+  .green h4 {
+    color: @green;
+  }
 
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  display: block;
-  position: relative;
-  overflow: hidden;
+  .orange h4 {
+    color: @orange;
+  }
 }
-.hero a:hover {
-  border: 1px solid #999999;
-  background: #dddddd;
-  text-decoration: none;
+
+.wizard .wizard, .wizard h1 { color: @wizard; }
+.barbarian .barbarian, .barbarian h1 { color: @barbarian; }
+.demon-hunter .demon-hunter, .demon-hunter h1 { color: @demon-hunter; }
+.monk .monk, .monk h1 { color: @monk; }
+.witch-doctor .witch-doctor, .witch-doctor h1 { color: @witch-doctor; }
+
+//
+// Login
+// --------------------------------
+#login-row {
+  form {
+    border: 1px solid @lighterGray;
+    padding: 14px 19px;
+    .border-radius(4px);
+  }
 }
-.hero p {
-  font-size: 12px;
-  color: #999999;
-  margin: 0;
-}
-.hero .wizard {
-  color: #3b5578;
-}
-.hero .barbarian {
-  color: #aa563d;
-}
-.hero .demon-hunter {
-  color: #905966;
-}
-.hero .monk {
-  color: #b16b36;
-}
-.hero .witch-doctor {
-  color: #5e6253;
-}
+
+
+
 #stats {
   margin-bottom: 20px;
-}
-#stats > div {
-  overflow: hidden;
-}
-#stats > div dt {
-  float: left;
-  clear: both;
-}
-#stats > div dd {
-  float: right;
-}
+  
+  > div { 
+    overflow: hidden; 
+
+    dt {
+      float: left;
+      clear: both;
+    }
+
+    dd {
+      float: right;
+    }
+  }
+}*/
 @media (max-width: 480px) {
   
 }
