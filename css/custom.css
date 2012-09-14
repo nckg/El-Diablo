@@ -16,8 +16,11 @@ body {
   color: #333333;
   text-shadow: 0 1px 0 #fff;
 }
+.paragon {
+  color: #049cdb;
+}
 #hero-overview .hero {
-  background: rgba(0, 0, 0, 0.2) url(../img/bg-overview.png) right -6px no-repeat;
+  background: rgba(0, 0, 0, 0.2) url(../img/sprite.png) right -6px no-repeat;
   border: 1px solid #424141;
   height: 68px;
   margin-bottom: 20px;
@@ -72,11 +75,26 @@ body {
   background: rgba(0, 0, 0, 0.2);
   border-top: 1px solid #424141;
   border-bottom: 1px solid #424141;
-  height: 68px;
   margin-bottom: 20px;
   -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+#hero-detail #name h1 {
+  margin: 20px 0;
+}
+#hero-detail #stats {
+  margin-bottom: 20px;
+}
+#hero-detail #stats > div {
+  overflow: hidden;
+}
+#hero-detail #stats > div dt {
+  float: left;
+  clear: both;
+}
+#hero-detail #stats > div dd {
+  float: right;
 }
 /*
 h1, h2, h3, h4, h5 {
@@ -132,24 +150,7 @@ small { color: @lightGray; }
   }
 }
 
-
-
-#stats {
-  margin-bottom: 20px;
-  
-  > div { 
-    overflow: hidden; 
-
-    dt {
-      float: left;
-      clear: both;
-    }
-
-    dd {
-      float: right;
-    }
-  }
-}*/
+*/
 @media (max-width: 480px) {
   
 }
