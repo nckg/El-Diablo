@@ -1,4 +1,3 @@
-
   window.Diablo3 = (function() {
 
     function Diablo3(region) {
@@ -78,7 +77,6 @@
         hero = _ref[_i];
         this.heroes.push(new Hero(hero));
       }
-      console.log(this.heroes);
     }
 
     return Overview;
@@ -106,7 +104,6 @@
       this.items = [];
       this.activeSkills = [];
       this.passiveSkills = [];
-      console.log(data);
       _ref = data.items;
       for (key in _ref) {
         item = _ref[key];
