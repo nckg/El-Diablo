@@ -70,8 +70,8 @@ body {
   
   .wizard { background-position: right -6px; }
   .barbarian { background-position: right -86px; }
-  .demon-hunter { background-position: right -166px; }
-  .monk { background-position: right -246px; }
+  .monk { background-position: right -166px; }
+  .demon-hunter { background-position: right -246px; }
   .witch-doctor { background-position: right -326px; }
 }
 
@@ -106,6 +106,99 @@ body {
         float: right;
       }
     }
+  }
+  
+  #hero-body {
+    position: relative;
+    
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+#gems {
+  > li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    width: 32px;
+    
+    &.head {
+      left: 117px;
+      top: 9px;
+    }
+    &.torso {
+      left: 117px;
+      top: 79px;
+    }
+    &.legs {
+      left: 117px;
+      top: 209px;
+    }
+    &.mainHand {}
+    &.offHand {}
+    &.rightFinger {}
+    &.leftFinger {}
+    &.neck {}
+  }
+  
+  .gem {
+    background: transparent @sprite 0 0 no-repeat;
+    width: 32px;
+    height: 32px;
+    display: block;
+    overlow: hidden;
+    text-indent: -9999em;
+    float: left;
+    clear: both;
+    margin-bottom: 3px;
+    
+    &.Topaz_01 { background-position: 6px -465px; }
+    &.Topaz_02 { background-position: -27px -465px; }
+    &.Topaz_03 { background-position: -59px -465px; }
+    &.Topaz_04 { background-position: -91px -465px; }
+    &.Topaz_05 { background-position: -125px -465px; }
+    &.Topaz_06 { background-position: -156px -465px; }
+    &.Topaz_07 { background-position: -188px -465px; }
+    &.Topaz_08 { background-position: -219px -465px; }
+    &.Topaz_09 { background-position: -252px -465px; }
+    &.Topaz_10 { background-position: -284px -465px; }
+    
+    &.Amethyst_01 { background-position: 6px -465px; }
+    &.Amethyst_02 { background-position: -27px -465px; }
+    &.Amethyst_03 { background-position: -59px -465px; }
+    &.Amethyst_04 { background-position: -91px -465px; }
+    &.Amethyst_05 { background-position: -125px -465px; }
+    &.Amethyst_06 { background-position: -156px -465px; }
+    &.Amethyst_07 { background-position: -188px -465px; }
+    &.Amethyst_08 { background-position: -219px -465px; }
+    &.Amethyst_09 { background-position: -252px -465px; }
+    &.Amethyst_10 { background-position: -284px -465px; }
+
+    &.Ruby_01 { background-position: 6px -497px; }
+    &.Ruby_02 { background-position: -27px -497px; }
+    &.Ruby_03 { background-position: -59px -497px; }
+    &.Ruby_04 { background-position: -91px -497px; }
+    &.Ruby_05 { background-position: -125px -497px; }
+    &.Ruby_06 { background-position: -156px -497px; }
+    &.Ruby_07 { background-position: -188px -497px; }
+    &.Ruby_08 { background-position: -219px -497px; }
+    &.Ruby_09 { background-position: -252px -497px; }
+    &.Ruby_10 { background-position: -284px -497px; }
+
+    &.Emerald_01 { background-position: 6px -433px; }
+    &.Emerald_02 { background-position: -27px -433px; }
+    &.Emerald_03 { background-position: -59px -433px; }
+    &.Emerald_04 { background-position: -91px -433px; }
+    &.Emerald_05 { background-position: -125px -433px; }
+    &.Emerald_06 { background-position: -156px -433px; }
+    &.Emerald_07 { background-position: -188px -433px; }
+    &.Emerald_08 { background-position: -219px -433px; }
+    &.Emerald_09 { background-position: -252px -433px; }
+    &.Emerald_10 { background-position: -284px -433px; }
   }
 }
 

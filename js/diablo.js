@@ -47,7 +47,8 @@
         for (index in _ref) {
           item = _ref[index];
           _results.push(item.getFullDetail(function(result) {
-            $('#' + result.getApiId()).html(Mustache.render(templates.item_detail, result));
+            $("#" + (result.getApiId())).html(Mustache.render(templates.item_detail, result));
+            $("#" + (result.getApiId()) + "-gems").html(Mustache.render(templates.gems, result));
           }));
         }
         return _results;

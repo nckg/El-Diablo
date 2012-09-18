@@ -51,7 +51,8 @@ getInfo = ( battleNetId, region="eu", onError=null, onSuccess=null ) =>
           
       for index, item of hero.items
         item.getFullDetail ( result ) ->
-          $( '#' + result.getApiId() ).html( Mustache.render( templates.item_detail, result ) )
+          $( "##{result.getApiId()}" ).html( Mustache.render( templates.item_detail, result ) )
+          $( "##{result.getApiId()}-gems" ).html( Mustache.render( templates.gems, result ) );
           return
 
 $( "document" ).ready () ->

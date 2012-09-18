@@ -62,10 +62,10 @@ body {
 #hero-overview .barbarian {
   background-position: right -86px;
 }
-#hero-overview .demon-hunter {
+#hero-overview .monk {
   background-position: right -166px;
 }
-#hero-overview .monk {
+#hero-overview .demon-hunter {
   background-position: right -246px;
 }
 #hero-overview .witch-doctor {
@@ -95,6 +95,163 @@ body {
 }
 #hero-detail #stats > div dd {
   float: right;
+}
+#hero-detail #hero-body {
+  position: relative;
+}
+#hero-detail #hero-body img {
+  margin: 0 auto;
+  display: block;
+}
+#gems > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+  width: 32px;
+}
+#gems > li.head {
+  left: 117px;
+  top: 9px;
+}
+#gems > li.torso {
+  left: 117px;
+  top: 79px;
+}
+#gems > li.legs {
+  left: 117px;
+  top: 209px;
+}
+#gems .gem {
+  background: transparent url(../img/sprite.png) 0 0 no-repeat;
+  width: 32px;
+  height: 32px;
+  display: block;
+  overlow: hidden;
+  text-indent: -9999em;
+  float: left;
+  clear: both;
+  margin-bottom: 3px;
+}
+#gems .gem.Topaz_01 {
+  background-position: 6px -465px;
+}
+#gems .gem.Topaz_02 {
+  background-position: -27px -465px;
+}
+#gems .gem.Topaz_03 {
+  background-position: -59px -465px;
+}
+#gems .gem.Topaz_04 {
+  background-position: -91px -465px;
+}
+#gems .gem.Topaz_05 {
+  background-position: -125px -465px;
+}
+#gems .gem.Topaz_06 {
+  background-position: -156px -465px;
+}
+#gems .gem.Topaz_07 {
+  background-position: -188px -465px;
+}
+#gems .gem.Topaz_08 {
+  background-position: -219px -465px;
+}
+#gems .gem.Topaz_09 {
+  background-position: -252px -465px;
+}
+#gems .gem.Topaz_10 {
+  background-position: -284px -465px;
+}
+#gems .gem.Amethyst_01 {
+  background-position: 6px -465px;
+}
+#gems .gem.Amethyst_02 {
+  background-position: -27px -465px;
+}
+#gems .gem.Amethyst_03 {
+  background-position: -59px -465px;
+}
+#gems .gem.Amethyst_04 {
+  background-position: -91px -465px;
+}
+#gems .gem.Amethyst_05 {
+  background-position: -125px -465px;
+}
+#gems .gem.Amethyst_06 {
+  background-position: -156px -465px;
+}
+#gems .gem.Amethyst_07 {
+  background-position: -188px -465px;
+}
+#gems .gem.Amethyst_08 {
+  background-position: -219px -465px;
+}
+#gems .gem.Amethyst_09 {
+  background-position: -252px -465px;
+}
+#gems .gem.Amethyst_10 {
+  background-position: -284px -465px;
+}
+#gems .gem.Ruby_01 {
+  background-position: 6px -497px;
+}
+#gems .gem.Ruby_02 {
+  background-position: -27px -497px;
+}
+#gems .gem.Ruby_03 {
+  background-position: -59px -497px;
+}
+#gems .gem.Ruby_04 {
+  background-position: -91px -497px;
+}
+#gems .gem.Ruby_05 {
+  background-position: -125px -497px;
+}
+#gems .gem.Ruby_06 {
+  background-position: -156px -497px;
+}
+#gems .gem.Ruby_07 {
+  background-position: -188px -497px;
+}
+#gems .gem.Ruby_08 {
+  background-position: -219px -497px;
+}
+#gems .gem.Ruby_09 {
+  background-position: -252px -497px;
+}
+#gems .gem.Ruby_10 {
+  background-position: -284px -497px;
+}
+#gems .gem.Emerald_01 {
+  background-position: 6px -433px;
+}
+#gems .gem.Emerald_02 {
+  background-position: -27px -433px;
+}
+#gems .gem.Emerald_03 {
+  background-position: -59px -433px;
+}
+#gems .gem.Emerald_04 {
+  background-position: -91px -433px;
+}
+#gems .gem.Emerald_05 {
+  background-position: -125px -433px;
+}
+#gems .gem.Emerald_06 {
+  background-position: -156px -433px;
+}
+#gems .gem.Emerald_07 {
+  background-position: -188px -433px;
+}
+#gems .gem.Emerald_08 {
+  background-position: -219px -433px;
+}
+#gems .gem.Emerald_09 {
+  background-position: -252px -433px;
+}
+#gems .gem.Emerald_10 {
+  background-position: -284px -433px;
 }
 /*
 h1, h2, h3, h4, h5 {
