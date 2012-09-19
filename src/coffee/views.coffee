@@ -73,7 +73,7 @@ class window.Hero
     @paragonLevel = data.paragonLevel
     @name         = data.name
     @progress     = data.progress
-    @stats        = data.stats
+    @stats        = []
     @items        = []
     @activeSkills = []
     @passiveSkills = []
@@ -90,6 +90,10 @@ class window.Hero
       for skill in data.skills.passive
         @passiveSkills.push new Skill( skill ) if skill.skill isnt undefined
   
+    if data.stats
+      for stat, key in data.stats
+        @stats.push new Stat key, stat
+
   toPercent: () ->
     ( value, render ) ->
       "#{parseInt( value * 100 )}%"
@@ -99,7 +103,13 @@ class window.Hero
   
   getParagonLevel: () ->
     " <span class=\"paragon\">(#{@paragonLevel})</span>" if @paragonLevel > 0        
+
+class window.Stat
+  constructor: ( @name, @value ) ->
     
+  asPercent: () ->
+    "#{parseInt( @value * 100 )}%"
+
 class window.Item
   constructor: ( @identifier, data ) ->
     @displayColor   = data.displayColor

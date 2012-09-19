@@ -98,6 +98,7 @@ body {
 }
 #hero-detail #hero-body {
   position: relative;
+  width: 360px;
 }
 #hero-detail #hero-body img {
   margin: 0 auto;
@@ -109,18 +110,42 @@ body {
   left: 0;
   list-style: none;
   width: 32px;
+  margin-left: -16px;
 }
 #gems > li.head {
-  left: 117px;
+  left: 50%;
   top: 9px;
 }
 #gems > li.torso {
-  left: 117px;
+  left: 50%;
   top: 79px;
 }
 #gems > li.legs {
-  left: 117px;
+  left: 50%;
   top: 209px;
+}
+#gems > li.mainHand {
+  top: 254px;
+  left: 100px;
+}
+#gems > li.offHand {
+  right: 84px;
+  top: 254px;
+  left: auto;
+}
+#gems > li.rightFinger {
+  right: 90px;
+  top: 180px;
+  left: auto;
+}
+#gems > li.leftFinger {
+  left: 100px;
+  top: 180px;
+}
+#gems > li.neck {
+  right: 113px;
+  top: 44px;
+  left: auto;
 }
 #gems .gem {
   background: transparent url(../img/sprite.png) 0 0 no-repeat;

@@ -110,6 +110,7 @@ body {
   
   #hero-body {
     position: relative;
+    width: 360px;
     
     img {
       margin: 0 auto;
@@ -125,24 +126,43 @@ body {
     left: 0;
     list-style: none;
     width: 32px;
+    margin-left: -16px;
     
     &.head {
-      left: 117px;
+      left: 50%;
       top: 9px;
     }
     &.torso {
-      left: 117px;
+      left: 50%;
       top: 79px;
     }
     &.legs {
-      left: 117px;
+      left: 50%;
       top: 209px;
     }
-    &.mainHand {}
-    &.offHand {}
-    &.rightFinger {}
-    &.leftFinger {}
-    &.neck {}
+    &.mainHand {
+      top: 254px;
+      left: 100px;
+    }
+    &.offHand {
+      right: 84px;
+      top: 254px;
+      left: auto;
+    }
+    &.rightFinger {
+      right: 90px;
+      top: 180px;
+      left: auto;
+    }
+    &.leftFinger {
+      left: 100px;
+      top: 180px;
+    }
+    &.neck {
+      right: 113px;
+      top: 44px;
+      left: auto;
+    }
   }
   
   .gem {
