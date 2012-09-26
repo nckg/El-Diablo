@@ -1,0 +1,1 @@
+class ElDiablo.ApplicationModel extends Backbone.Model
