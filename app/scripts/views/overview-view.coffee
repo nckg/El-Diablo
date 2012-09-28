@@ -10,4 +10,4 @@ class ElDiablo.overviewView extends Backbone.View
     @heroColl.fetch()
     
   render: () ->
-    console.log @heroColl
+    

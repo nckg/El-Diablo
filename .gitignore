@@ -1,6 +1,6 @@
 
 .DS_Store
-temp/*
+temp/
 temp
 temp/scripts/models/stat-model.js
 
