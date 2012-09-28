@@ -1,6 +1,5 @@
 class ElDiablo.overviewView extends Backbone.View
-  el        : $( "heroes" )
-  template  : ''
+  el: $( "#heroes" )
   
   initialize: () ->
     $( "#login-row" ).hide()
@@ -10,4 +9,5 @@ class ElDiablo.overviewView extends Backbone.View
     @heroColl.fetch()
     
   render: () ->
-    
+    $.get '/scripts/templates/overview.mustache', ( data ) =>
+      $( @el ).html Mustache.render( data, @heroColl.models[0].attributes )
