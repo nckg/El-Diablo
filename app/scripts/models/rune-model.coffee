@@ -1,5 +1,5 @@
-class ElDiablo.HeroModel extends Backbone.Model
-	defaults =
+class ElDiablo.RuneModel extends Backbone.Model
+	defaults :
     description        : ""
     level              : 0
     name               : ""

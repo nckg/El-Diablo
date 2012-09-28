@@ -1,2 +1,19 @@
 
 .DS_Store
+temp/*
+temp
+temp/scripts/models/stat-model.js
+
+temp/scripts/models/hero-model.js
+
+temp/scripts/models/item-model.js
+
+temp/scripts/models/overview-model.js
+
+temp/scripts/models/rune-model.js
+
+temp/scripts/models/skill-model.js
+
+temp/scripts/routes/application-router.js
+
+temp/scripts/models/gem-model.js

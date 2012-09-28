@@ -1,5 +1,5 @@
-class ElDiablo.HeroModel extends Backbone.Model
-  defaults =
+class ElDiablo.ItemModel extends Backbone.Model
+  defaults :
     displayColor   : ""
     gems           : []
     icon           : ""

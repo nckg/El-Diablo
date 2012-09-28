@@ -1,5 +1,5 @@
-class ElDiablo.HeroModel extends Backbone.Model
-  defaults =
+class ElDiablo.GemModel extends Backbone.Model
+  defaults :
     id            : ""
     name          : ""
     icon          : ""

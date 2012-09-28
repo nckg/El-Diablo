@@ -1,4 +1,4 @@
-class ElDiablo.SkillModel extends Backbone.Model
-  defaults =
+class ElDiablo.StatModel extends Backbone.Model
+  defaults :
     name  : ""
     value : ""

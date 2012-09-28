@@ -13,22 +13,43 @@
 
     </head>
     <body>
-    <div class="container">
-        <div class="hero-unit">
-            <h1>Cheerio!</h1>
-            <p>You now have</p>
-            <ul>
-                <li>HTML5 Boilerplate</li>
-                <li>jQuery</li>
-                <li>Backbone.js</li>
-                <li>Lodash</li>
-                <li>Mocha</li>
-            </ul>
-            <p>installed.</p>
-            <h3>Enjoy coding! - Yeoman</h3>
-        </div>
-    </div>
-        <!--[if lt IE 7]>
+		<div class="container-fluid">
+			<div class="row-fluid" id="login-row">
+				<div class="span12">
+					<form id="searchform" class="form-horizontal">
+						<legend>Find your heroes with your Battle.net ID</legend>
+						<div class="control-group">
+							<label class="control-label" for="battlenetid">Battle.net ID</label>
+							<div class="controls">
+								<input type="text" placeholder="YourId#1234" value="" name="battlenetid" id="battlenetid" />
+							</div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="battlenetid">Region</label>
+							<div class="controls">
+								<select name="region" id="region">
+							    	<option value="eu">Europe</option>
+							    	<option value="us">US</option>
+							    	<option value="kr">Korea</option>
+							    	<option value="tw">Taiwan</option>
+							    </select>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="controls">
+								<button type="submit" class="btn btn-primary">Find your heroes</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div><!-- /#login -->
+			<div id="heroes"></div><!-- /#heroes -->
+		</div>
+		<div id="hero"></div><!-- /#hero -->
+    
+       <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
@@ -40,8 +61,12 @@
         <script src="scripts/vendor/backbone-min.js"></script>
         <script src="scripts/main.js"></script>
         <script src="scripts/views/application-view.js"></script>
+        <script src="scripts/views/overview	-view.js"></script>
         <script src="scripts/models/application-model.js"></script>
+        <script src="scripts/models/overview-model.js"></script>
+        <script src="scripts/models/hero-model.js"></script>
         <script src="scripts/collections/application-collection.js"></script>
+        <script src="scripts/collections/overview-collection.js"></script>
         <script src="scripts/routes/application-router.js"></script>
         <!-- endbuild -->
 

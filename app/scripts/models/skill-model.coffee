@@ -1,5 +1,5 @@
-class ElDiablo.HeroModel extends Backbone.Model
-	defaults =
+class ElDiablo.SkillModel extends Backbone.Model
+	defaults :
     categorySlug      : ""
     description       : ""
     icon              : ""

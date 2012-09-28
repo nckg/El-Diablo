@@ -1,6 +1,12 @@
 class ElDiablo.Router extends Backbone.Router
-  routes =
-    "*actions": "defaultRoute"
+  routes :
+    ""          : "index"
+    "id/:name-:number"  : "overview"
   
-  defaultRoute: ( actions ) ->
-    console.log actions
+  initialize: ( options ) ->
+  
+  index: ( hash ) ->
+    tutorial = new ElDiablo.applicationView()
+  
+  overview: ( name, number ) ->
+    new ElDiablo.overviewView()

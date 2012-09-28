@@ -1,5 +1,5 @@
 class ElDiablo.HeroModel extends Backbone.Model
-	defaults =
+	defaults :
    	dead          : 0
    	followers     : []
    	gender        : 0
