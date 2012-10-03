@@ -1,15 +1,15 @@
 class ElDiablo.applicationView extends Backbone.View
 	el: $( "#login-row" )
 
+	events: 
+		"click button[type=submit]": "doLogin"
+
 	initialize: ->
 		@render()
 
 	render: () ->
 		$.get '/scripts/templates/login.mustache', ( data ) =>
 	    	$( @el ).html Mustache.render( data )
-
-	events: 
-		"click button[type=submit]": "doLogin"
 
 	doLogin: ( event ) ->
 		pattern = /^(\w+)(#|-){1}(\d+)$/
