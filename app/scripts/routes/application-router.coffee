@@ -2,7 +2,7 @@ class ElDiablo.Router extends Backbone.Router
   routes :
     ""                  : "index"
     "id/:name-:number"  : "overview"
-    "hero/:id"      : "heroDetail"
+    "hero/:id"          : "heroDetail"
   
   initialize: ( options ) ->
   
@@ -10,7 +10,7 @@ class ElDiablo.Router extends Backbone.Router
     tutorial = new ElDiablo.applicationView()
   
   overview: ( name, number ) ->
-    new ElDiablo.overviewView()
+    new ElDiablo.overviewView( name, number )
     
   heroDetail: ( id ) ->
-    new ElDiablo.heroView()
+    new ElDiablo.heroView( id )
