@@ -1,23 +1,18 @@
 class ElDiablo.HeroModel extends Backbone.Model
    defaults :
-      dead           : 0
-      followers      : []
-      gender         : 0
-      hardcore       : 0
-      kills          : 0
-      lastUpdated    : 0
-      level          : 0
-      paragonLevel   : 0
-      stats          : []
-      items          : null
-      activeSkils    : []
-      passiveSkils   : []
+      battleNetId    : ''
+      id             : ''
       
-   schema :
-      # Functions
-      toPercent      : ( value ) ->
-         ( value, render ) ->
-            "#{parseInt( value * 100 )}%"
+   url : ->
+      console.log @
+      "#{ElDiablo.Config.urlFormat}profile/#{@attributes.battleNetId}/hero/#{@id}"
 
-   url : () ->
-      ""
+   sync: ( method, model, options ) ->
+      params = _.extend
+            type: 'GET'
+            dataType: 'jsonp'
+            url: model.url()
+            processData: false
+         , options
+
+      $.ajax( params )

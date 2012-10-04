@@ -1,12 +1,12 @@
 class ElDiablo.heroView extends Backbone.View
 	el: $( "#hero" )
 
-	initialize: ( @heroId ) ->
+	initialize: ( battleNetName, battleNetNumber, heroId ) ->
 		$( "#login-row" ).hide()
 
-		@heroColl = new ElDiablo.HeroCollection( @heroId )
-		@heroColl.bind "reset", @render, @
-		@heroColl.fetch()
+		@hero = new ElDiablo.HeroModel( { battleNetId: "#{battleNetName}-#{battleNetNumber}", id: heroId } )
+		@hero.bind "reset", @render, @
+		@hero.fetch()
 
 	render: () ->
 		$.get '/scripts/templates/hero.mustache', ( data ) =>
