@@ -18,3 +18,6 @@ class ElDiablo.HeroModel extends Backbone.Model
       toPercent      : ( value ) ->
          ( value, render ) ->
             "#{parseInt( value * 100 )}%"
+
+   url : () ->
+      ""
