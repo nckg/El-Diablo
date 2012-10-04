@@ -5,7 +5,6 @@ class ElDiablo.ItemModel extends Backbone.Model
     url: () ->
         "#{ElDiablo.Config.urlFormat}data/item/#{@id}"
 
-
     sync: ( method, model, options ) ->
         params = _.extend
             type: 'GET'
