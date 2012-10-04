@@ -12,5 +12,6 @@ class ElDiablo.Router extends Backbone.Router
     overview: ( name, number ) ->
         new ElDiablo.overviewView( name, number )
 
-    heroDetail: ( id ) ->
-        new ElDiablo.heroView( id )
+    heroDetail: ( name, number, id ) ->
+        new ElDiablo.overviewView( name, number )
+        new ElDiablo.heroView( name, number, id )
