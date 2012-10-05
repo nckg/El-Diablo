@@ -2,9 +2,10 @@ class ElDiablo.HeroModel extends Backbone.Model
    defaults :
       battleNetId    : ''
       id             : ''
+      activeSkills   : ''
+      passiveSkills   : ''
       
    url : ->
-      console.log @
       "#{ElDiablo.Config.urlFormat}profile/#{@attributes.battleNetId}/hero/#{@id}"
 
    sync: ( method, model, options ) ->
@@ -16,3 +17,6 @@ class ElDiablo.HeroModel extends Backbone.Model
          , options
 
       $.ajax( params )
+
+   parse: ( response ) ->
+      response
